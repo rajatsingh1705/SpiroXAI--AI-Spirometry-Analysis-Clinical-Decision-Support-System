@@ -1,0 +1,83 @@
+{
+  "khan@hospital.com": [
+    {
+      "id": "6fbfc8f9-acf8-486f-bdef-2fc0db1e31ca",
+      "name": "Jane Smith",
+      "created_at": "2026-03-27T16:08:31.785835",
+      "sex": 0,
+      "age": 42,
+      "height": 165.0,
+      "weight": 65.0,
+      "bmi": 23.9,
+      "race": "White"
+    }
+  ],
+  "niharroutray72@gmail.com": [
+    {
+      "id": "491661df-4804-4ef6-801d-88961579bc50",
+      "name": "Rajat",
+      "created_at": "2026-03-27T16:23:41.455243",
+      "sex": 1,
+      "age": 65,
+      "height": 170.0,
+      "weight": 85.0,
+      "bmi": 29.4,
+      "race": "White"
+    },
+    {
+      "id": "908d6f2f-17bf-48ef-861e-3a08b97a134a",
+      "name": "Aamee",
+      "created_at": "2026-03-27T17:26:12.196727",
+      "sex": 0,
+      "age": 50,
+      "height": 150.0,
+      "weight": 60.0,
+      "bmi": 26.7,
+      "race": "White"
+    },
+    {
+      "id": "75af4140-b677-4630-b8e2-4f06f51f96fb",
+      "name": "Sarah",
+      "created_at": "2026-03-27T17:33:28.520870",
+      "sex": 0,
+      "age": 25,
+      "height": 162.0,
+      "weight": 52.0,
+      "bmi": 19.8,
+      "race": "White"
+    },
+    {
+      "id": "30b2f9c5-6f44-4406-b459-38f187321a43",
+      "name": "Akul Tyagi",
+      "created_at": "2026-03-27T21:51:21.650242",
+      "sex": 1,
+      "age": 22,
+      "height": 178.0,
+      "weight": 64.0,
+      "bmi": 20.2,
+      "race": "Other"
+    },
+    {
+      "id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "name": "Harsh Arora",
+      "created_at": "2026-03-27T22:06:15.462579",
+      "sex": 1,
+      "age": 23,
+      "height": 178.0,
+      "weight": 72.0,
+      "bmi": 22.7,
+      "race": "Other"
+    },
+    {
+      "id": "b84d96e6-01d9-437b-bb03-0cc6cdff42b0",
+      "name": "ABC",
+      "created_at": "2026-04-06T07:42:36.047137",
+      "sex": 1,
+      "age": 30,
+      "height": 197.0,
+      "weight": 57.0,
+      "bmi": 14.7,
+      "race": "Mexican American"
+    }
+  ]
+}

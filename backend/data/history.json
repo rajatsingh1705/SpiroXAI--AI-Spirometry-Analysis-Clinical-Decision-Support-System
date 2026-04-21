@@ -1,0 +1,3336 @@
+{
+  "khan@hospital.com": [
+    {
+      "id": "7494e2d1-905e-4bd7-9aec-8a03bc64b792",
+      "timestamp": "2026-03-27T15:54:02.067042",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 55.0,
+        "Weight": 80.0,
+        "Height": 175.0,
+        "BMI": 26.1261,
+        "Baseline_PEF_Ls": 5.2,
+        "Baseline_FEF2575_Ls": 2.1,
+        "Baseline_Extrapolated_Volume": 0.12,
+        "Baseline_Forced_Expiratory_Time": 5.2,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 81.0,
+        "probabilities": {
+          "Normal": 0.8098,
+          "Obstruction": 0.0631,
+          "Restriction": 0.1271
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3584,
+              "direction": "positive",
+              "value": 2.1
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6388,
+              "direction": "positive",
+              "value": 1.1314
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6712,
+              "direction": "negative",
+              "value": 30625.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5355,
+              "direction": "negative",
+              "value": 5.2
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4876,
+              "direction": "negative",
+              "value": 175.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4513,
+              "direction": "negative",
+              "value": 4.41
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4205,
+              "direction": "negative",
+              "value": 10.92
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3821,
+              "direction": "positive",
+              "value": 55.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3333,
+              "direction": "positive",
+              "value": 26.1261
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2187,
+              "direction": "positive",
+              "value": 0.0382
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "4c4410ed-bf24-4199-86b5-7b0d5d63c868",
+      "patient_id": "6fbfc8f9-acf8-486f-bdef-2fc0db1e31ca",
+      "patient_name": "Jane Smith",
+      "timestamp": "2026-03-27T16:09:31.851291",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 42.0,
+        "Weight": 65.0,
+        "Height": 165.0,
+        "BMI": 23.9,
+        "Baseline_PEF_Ls": 4.2,
+        "Baseline_FEF2575_Ls": 1.1,
+        "Baseline_Extrapolated_Volume": 0.25,
+        "Baseline_Forced_Expiratory_Time": 8.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 88.1,
+        "probabilities": {
+          "Normal": 0.8813,
+          "Obstruction": 0.023,
+          "Restriction": 0.0958
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.2033,
+              "direction": "positive",
+              "value": 1.1
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.457,
+              "direction": "positive",
+              "value": 0.7419
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6974,
+              "direction": "negative",
+              "value": 27225.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5426,
+              "direction": "negative",
+              "value": 8.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.5145,
+              "direction": "negative",
+              "value": 165.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4142,
+              "direction": "positive",
+              "value": 42.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4025,
+              "direction": "negative",
+              "value": 4.62
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.2939,
+              "direction": "positive",
+              "value": 23.9
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2189,
+              "direction": "positive",
+              "value": 0.0262
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.1898,
+              "direction": "negative",
+              "value": 3.1
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "056aa07e-e612-4ee0-b9f8-89b6dcc5fb13",
+      "patient_id": "6fbfc8f9-acf8-486f-bdef-2fc0db1e31ca",
+      "patient_name": "Jane Smith",
+      "timestamp": "2026-03-27T16:09:47.462593",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 42.0,
+        "Weight": 65.0,
+        "Height": 165.0,
+        "BMI": 23.9,
+        "Baseline_PEF_Ls": 4.2,
+        "Baseline_FEF2575_Ls": 0.5,
+        "Baseline_Extrapolated_Volume": 0.25,
+        "Baseline_Forced_Expiratory_Time": 8.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 86.5,
+        "probabilities": {
+          "Normal": 0.8655,
+          "Obstruction": 0.019,
+          "Restriction": 0.1155
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.1182,
+              "direction": "positive",
+              "value": 0.5
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.3149,
+              "direction": "positive",
+              "value": 0.4055
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.7273,
+              "direction": "negative",
+              "value": 27225.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.5566,
+              "direction": "negative",
+              "value": 165.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.513,
+              "direction": "negative",
+              "value": 8.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4231,
+              "direction": "positive",
+              "value": 42.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3039,
+              "direction": "positive",
+              "value": 23.9
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.201,
+              "direction": "positive",
+              "value": 0.0119
+            },
+            {
+              "feature": "BMI_x_PEF",
+              "contribution": 0.19,
+              "direction": "positive",
+              "value": 100.38
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.1897,
+              "direction": "negative",
+              "value": 3.7
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "2d73713e-b776-4f19-8d12-0b409eaa66b2",
+      "patient_id": "6fbfc8f9-acf8-486f-bdef-2fc0db1e31ca",
+      "patient_name": "Jane Smith",
+      "timestamp": "2026-03-27T16:10:00.594981",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 42.0,
+        "Weight": 65.0,
+        "Height": 165.0,
+        "BMI": 23.9,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.3,
+        "Baseline_Extrapolated_Volume": 0.25,
+        "Baseline_Forced_Expiratory_Time": 8.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 85.6,
+        "probabilities": {
+          "Normal": 0.8556,
+          "Obstruction": 0.0346,
+          "Restriction": 0.1099
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 1.6053,
+              "direction": "positive",
+              "value": 0.3
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.9707,
+              "direction": "negative",
+              "value": 27225.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.6587,
+              "direction": "negative",
+              "value": 165.0
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 0.5871,
+              "direction": "positive",
+              "value": 0.2624
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5448,
+              "direction": "negative",
+              "value": 8.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4938,
+              "direction": "positive",
+              "value": 42.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3486,
+              "direction": "positive",
+              "value": 23.9
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.2383,
+              "direction": "negative",
+              "value": 1.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2383,
+              "direction": "positive",
+              "value": 0.0071
+            },
+            {
+              "feature": "BMI_x_PEF",
+              "contribution": 0.2015,
+              "direction": "positive",
+              "value": 47.8
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and low Height sq."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "e3a83f89-c86e-4d8d-8487-1ca6e9e63e2c",
+      "patient_id": "6fbfc8f9-acf8-486f-bdef-2fc0db1e31ca",
+      "patient_name": "Jane Smith",
+      "timestamp": "2026-03-27T17:09:26.560656",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 42.0,
+        "Weight": 65.0,
+        "Height": 165.0,
+        "BMI": 23.9,
+        "Baseline_PEF_Ls": 5.8,
+        "Baseline_FEF2575_Ls": 3.2,
+        "Baseline_Extrapolated_Volume": 0.1,
+        "Baseline_Forced_Expiratory_Time": 2.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Restriction",
+        "confidence_pct": 62.7,
+        "probabilities": {
+          "Normal": 0.0151,
+          "Obstruction": 0.3581,
+          "Restriction": 0.6268
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -1.7532,
+              "direction": "negative",
+              "value": 2.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -1.7388,
+              "direction": "negative",
+              "value": 165.0
+            },
+            {
+              "feature": "Baseline_PEF_Ls",
+              "contribution": -1.2135,
+              "direction": "negative",
+              "value": 5.8
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": 0.701,
+              "direction": "positive",
+              "value": 27225.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4755,
+              "direction": "positive",
+              "value": 42.0
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.3949,
+              "direction": "negative",
+              "value": 2.6
+            },
+            {
+              "feature": "log_Baseline_Forced_Expiratory_Time",
+              "contribution": -0.3506,
+              "direction": "negative",
+              "value": 1.2528
+            },
+            {
+              "feature": "Weight",
+              "contribution": -0.3081,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": 0.281,
+              "direction": "positive",
+              "value": 18.56
+            },
+            {
+              "feature": "Vol_per_FET",
+              "contribution": -0.2181,
+              "direction": "negative",
+              "value": 0.04
+            }
+          ],
+          "text_summary": "Prediction is Restriction mainly due to low Forced Expiratory Time and low Height."
+        },
+        "is_heuristic": false
+      }
+    }
+  ],
+  "niharroutray72@gmail.com": [
+    {
+      "id": "32f6cd07-a9f6-4789-914e-0cd8a0a91087",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T16:24:54.021723",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 82.9,
+        "probabilities": {
+          "Normal": 0.8294,
+          "Obstruction": 0.0215,
+          "Restriction": 0.1491
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 1.8865,
+              "direction": "positive",
+              "value": 0.4
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.3016,
+              "direction": "positive",
+              "value": 0.3365
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.7343,
+              "direction": "negative",
+              "value": 28900.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.5935,
+              "direction": "negative",
+              "value": 170.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5312,
+              "direction": "negative",
+              "value": 12.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.443,
+              "direction": "positive",
+              "value": 65.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3268,
+              "direction": "positive",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2187,
+              "direction": "positive",
+              "value": 0.0062
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.2142,
+              "direction": "negative",
+              "value": 1.6
+            },
+            {
+              "feature": "BMI_x_PEF",
+              "contribution": 0.1948,
+              "direction": "positive",
+              "value": 58.8
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "41fc9066-3659-48cd-ba8d-232523e4ab49",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T17:02:36.008388",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 7.5,
+        "Baseline_FEF2575_Ls": 3.2,
+        "Baseline_Extrapolated_Volume": 0.15,
+        "Baseline_Forced_Expiratory_Time": 4.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 7.2,
+        "probabilities": {
+          "Normal": 0.8303,
+          "Obstruction": 0.0718,
+          "Restriction": 0.0978
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -2.087,
+              "direction": "negative",
+              "value": 3.2
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.2451,
+              "direction": "positive",
+              "value": 4.5
+            },
+            {
+              "feature": "Age",
+              "contribution": -0.998,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.5443,
+              "direction": "positive",
+              "value": 170.0
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4386,
+              "direction": "positive",
+              "value": 4.3
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3778,
+              "direction": "negative",
+              "value": 0.0492
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.3581,
+              "direction": "negative",
+              "value": 3.2
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.3562,
+              "direction": "negative",
+              "value": 1.4351
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3146,
+              "direction": "negative",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": 0.3064,
+              "direction": "positive",
+              "value": 10.24
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "6679da03-451d-4005-b8f4-db366bf8568d",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T17:09:27.883160",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 0.6,
+        "Baseline_FEF2575_Ls": 0.5,
+        "Baseline_Extrapolated_Volume": 0.05,
+        "Baseline_Forced_Expiratory_Time": 1.5,
+        "Baseline_Number_Acceptable_Curves": 5.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Restriction",
+        "confidence_pct": 70.4,
+        "probabilities": {
+          "Normal": 0.1695,
+          "Obstruction": 0.126,
+          "Restriction": 0.7045
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -1.9897,
+              "direction": "negative",
+              "value": 1.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -1.689,
+              "direction": "negative",
+              "value": 170.0
+            },
+            {
+              "feature": "Baseline_PEF_Ls",
+              "contribution": -1.1549,
+              "direction": "negative",
+              "value": 0.6
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": 0.7288,
+              "direction": "positive",
+              "value": 28900.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4945,
+              "direction": "positive",
+              "value": 65.0
+            },
+            {
+              "feature": "log_Baseline_Forced_Expiratory_Time",
+              "contribution": -0.3922,
+              "direction": "negative",
+              "value": 0.9163
+            },
+            {
+              "feature": "Weight",
+              "contribution": -0.3129,
+              "direction": "negative",
+              "value": 85.0
+            },
+            {
+              "feature": "Vol_per_FET",
+              "contribution": -0.2916,
+              "direction": "negative",
+              "value": 0.0333
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.2777,
+              "direction": "negative",
+              "value": 0.3
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.2053,
+              "direction": "negative",
+              "value": 0.1
+            }
+          ],
+          "text_summary": "Prediction is Restriction mainly due to low Forced Expiratory Time and low Height."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "99311645-cb54-4332-8b0a-6029910d479a",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T17:17:46.433866",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Restriction",
+        "confidence_pct": 90.5,
+        "probabilities": {
+          "Normal": 0.027,
+          "Obstruction": 0.0677,
+          "Restriction": 0.9053
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -1.9437,
+              "direction": "negative",
+              "value": 12.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -1.7628,
+              "direction": "negative",
+              "value": 170.0
+            },
+            {
+              "feature": "Baseline_PEF_Ls",
+              "contribution": -1.1628,
+              "direction": "negative",
+              "value": 2.0
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": 0.7091,
+              "direction": "positive",
+              "value": 28900.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4215,
+              "direction": "positive",
+              "value": 65.0
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.3636,
+              "direction": "negative",
+              "value": 1.6
+            },
+            {
+              "feature": "log_Baseline_Forced_Expiratory_Time",
+              "contribution": -0.3624,
+              "direction": "negative",
+              "value": 2.5649
+            },
+            {
+              "feature": "Weight",
+              "contribution": -0.3072,
+              "direction": "negative",
+              "value": 85.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.2875,
+              "direction": "negative",
+              "value": 0.8
+            },
+            {
+              "feature": "Sex_x_PEF",
+              "contribution": 0.2078,
+              "direction": "positive",
+              "value": 2.0
+            }
+          ],
+          "text_summary": "Prediction is Restriction mainly due to low Forced Expiratory Time and low Height."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "d5497a48-4ebc-4fa4-acc0-d56eac13bf59",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T17:24:54.646536",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 93.7,
+        "probabilities": {
+          "Normal": 0.0549,
+          "Obstruction": 0.9367,
+          "Restriction": 0.0084
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -1.861,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.2114,
+              "direction": "positive",
+              "value": 12.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.1558,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.645,
+              "direction": "positive",
+              "value": 170.0
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.5605,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4185,
+              "direction": "positive",
+              "value": 1.6
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3515,
+              "direction": "negative",
+              "value": 0.0062
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3496,
+              "direction": "negative",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.3454,
+              "direction": "negative",
+              "value": 0.16
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.3096,
+              "direction": "negative",
+              "value": 0.3365
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "d4984870-9567-43c8-9c32-54f81214d722",
+      "patient_id": "908d6f2f-17bf-48ef-861e-3a08b97a134a",
+      "patient_name": "Aamee",
+      "timestamp": "2026-03-27T17:26:58.857484",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 50.0,
+        "Weight": 60.0,
+        "Height": 150.0,
+        "BMI": 26.7,
+        "Baseline_PEF_Ls": 3.0,
+        "Baseline_FEF2575_Ls": 3.0,
+        "Baseline_Extrapolated_Volume": 0.05,
+        "Baseline_Forced_Expiratory_Time": 1.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 58.4,
+        "probabilities": {
+          "Normal": 0.3574,
+          "Obstruction": 0.5845,
+          "Restriction": 0.0582
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -2.0892,
+              "direction": "negative",
+              "value": 3.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.0985,
+              "direction": "negative",
+              "value": 50.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.639,
+              "direction": "positive",
+              "value": 150.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 0.5801,
+              "direction": "positive",
+              "value": 1.5
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.4704,
+              "direction": "negative",
+              "value": 0.0
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.4169,
+              "direction": "negative",
+              "value": 1.3863
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3914,
+              "direction": "negative",
+              "value": 26.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3316,
+              "direction": "negative",
+              "value": 0.06
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": 0.3255,
+              "direction": "positive",
+              "value": 9.0
+            },
+            {
+              "feature": "BMI_x_FEF",
+              "contribution": 0.2732,
+              "direction": "positive",
+              "value": 80.1
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and low Age."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "a13e2e4c-d7d0-4e01-a45a-ed31f31ab595",
+      "patient_id": "908d6f2f-17bf-48ef-861e-3a08b97a134a",
+      "patient_name": "Aamee",
+      "timestamp": "2026-03-27T17:30:23.592409",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 50.0,
+        "Weight": 60.0,
+        "Height": 150.0,
+        "BMI": 26.7,
+        "Baseline_PEF_Ls": 3.0,
+        "Baseline_FEF2575_Ls": 3.0,
+        "Baseline_Extrapolated_Volume": 0.05,
+        "Baseline_Forced_Expiratory_Time": 1.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Restriction",
+        "confidence_pct": 100.0,
+        "probabilities": {
+          "Normal": 0.0002,
+          "Obstruction": 0.0,
+          "Restriction": 0.9998
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -1.8216,
+              "direction": "negative",
+              "value": 1.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -1.7452,
+              "direction": "negative",
+              "value": 150.0
+            },
+            {
+              "feature": "Baseline_PEF_Ls",
+              "contribution": -1.1998,
+              "direction": "negative",
+              "value": 3.0
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": 0.6982,
+              "direction": "positive",
+              "value": 22500.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.5118,
+              "direction": "positive",
+              "value": 50.0
+            },
+            {
+              "feature": "log_Baseline_Forced_Expiratory_Time",
+              "contribution": -0.376,
+              "direction": "negative",
+              "value": 0.9163
+            },
+            {
+              "feature": "Weight",
+              "contribution": -0.2958,
+              "direction": "negative",
+              "value": 60.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": 0.2753,
+              "direction": "positive",
+              "value": 9.0
+            },
+            {
+              "feature": "Vol_per_FET",
+              "contribution": -0.249,
+              "direction": "negative",
+              "value": 0.0333
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.2014,
+              "direction": "negative",
+              "value": 0.0
+            }
+          ],
+          "text_summary": "Prediction is Restriction mainly due to low Forced Expiratory Time and low Height."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "66c77a97-9bca-4ab2-bbdc-f1b5370c3e7e",
+      "patient_id": "75af4140-b677-4630-b8e2-4f06f51f96fb",
+      "patient_name": "Sarah",
+      "timestamp": "2026-03-27T17:50:54.598271",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 25.0,
+        "Weight": 52.0,
+        "Height": 162.0,
+        "BMI": 19.8,
+        "Baseline_PEF_Ls": 3.0,
+        "Baseline_FEF2575_Ls": 0.5,
+        "Baseline_Extrapolated_Volume": 0.25,
+        "Baseline_Forced_Expiratory_Time": 10.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 65.3,
+        "probabilities": {
+          "Normal": 0.6533,
+          "Obstruction": 0.3137,
+          "Restriction": 0.0331
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.0057,
+              "direction": "positive",
+              "value": 0.5
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.2855,
+              "direction": "positive",
+              "value": 0.4055
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.7234,
+              "direction": "negative",
+              "value": 26244.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.5754,
+              "direction": "negative",
+              "value": 162.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.529,
+              "direction": "negative",
+              "value": 10.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.4312,
+              "direction": "positive",
+              "value": 25.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3053,
+              "direction": "positive",
+              "value": 19.8
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2119,
+              "direction": "positive",
+              "value": 0.02
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.1996,
+              "direction": "negative",
+              "value": 2.5
+            },
+            {
+              "feature": "BMI_x_PEF",
+              "contribution": 0.1916,
+              "direction": "positive",
+              "value": 59.4
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "af409dfc-7b90-4976-a363-79e42e4f9510",
+      "patient_id": "75af4140-b677-4630-b8e2-4f06f51f96fb",
+      "patient_name": "Sarah",
+      "timestamp": "2026-03-27T17:53:35.644767",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 25.0,
+        "Weight": 52.0,
+        "Height": 162.0,
+        "BMI": 19.8,
+        "Baseline_PEF_Ls": 3.0,
+        "Baseline_FEF2575_Ls": 0.5,
+        "Baseline_Extrapolated_Volume": 0.25,
+        "Baseline_Forced_Expiratory_Time": 10.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 80.9,
+        "probabilities": {
+          "Normal": 0.1684,
+          "Obstruction": 0.8087,
+          "Restriction": 0.0229
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -1.857,
+              "direction": "negative",
+              "value": 0.5
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.1966,
+              "direction": "positive",
+              "value": 10.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.1296,
+              "direction": "negative",
+              "value": 25.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.6398,
+              "direction": "positive",
+              "value": 162.0
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.5335,
+              "direction": "negative",
+              "value": 0.0
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4519,
+              "direction": "positive",
+              "value": 2.5
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3737,
+              "direction": "negative",
+              "value": 19.8
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3629,
+              "direction": "negative",
+              "value": 0.02
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.3449,
+              "direction": "negative",
+              "value": 0.25
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.2945,
+              "direction": "negative",
+              "value": 0.4055
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "cde53fb8-2d0d-4788-930a-e548b1192552",
+      "patient_id": "75af4140-b677-4630-b8e2-4f06f51f96fb",
+      "patient_name": "Sarah",
+      "timestamp": "2026-03-27T17:54:08.413522",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 25.0,
+        "Weight": 52.0,
+        "Height": 162.0,
+        "BMI": 19.8,
+        "Baseline_PEF_Ls": 2.8,
+        "Baseline_FEF2575_Ls": 2.6,
+        "Baseline_Extrapolated_Volume": 0.08,
+        "Baseline_Forced_Expiratory_Time": 1.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Restriction",
+        "confidence_pct": 86.3,
+        "probabilities": {
+          "Normal": 0.1211,
+          "Obstruction": 0.0157,
+          "Restriction": 0.8632
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -1.8123,
+              "direction": "negative",
+              "value": 1.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -1.7453,
+              "direction": "negative",
+              "value": 162.0
+            },
+            {
+              "feature": "Baseline_PEF_Ls",
+              "contribution": -1.2038,
+              "direction": "negative",
+              "value": 2.8
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": 0.6934,
+              "direction": "positive",
+              "value": 26244.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.5221,
+              "direction": "positive",
+              "value": 25.0
+            },
+            {
+              "feature": "log_Baseline_Forced_Expiratory_Time",
+              "contribution": -0.3741,
+              "direction": "negative",
+              "value": 0.9163
+            },
+            {
+              "feature": "Weight",
+              "contribution": -0.3045,
+              "direction": "negative",
+              "value": 52.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": 0.2785,
+              "direction": "positive",
+              "value": 7.28
+            },
+            {
+              "feature": "Vol_per_FET",
+              "contribution": -0.2427,
+              "direction": "negative",
+              "value": 0.0533
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.1958,
+              "direction": "negative",
+              "value": 0.2
+            }
+          ],
+          "text_summary": "Prediction is Restriction mainly due to low Forced Expiratory Time and low Height."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "5a45fe04-aa63-4af0-8b3e-87a41fbef186",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-27T20:37:02.327073",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 82.2,
+        "probabilities": {
+          "Normal": 0.1528,
+          "Obstruction": 0.8215,
+          "Restriction": 0.0257
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -1.861,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.2114,
+              "direction": "positive",
+              "value": 12.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.1558,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.645,
+              "direction": "positive",
+              "value": 170.0
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.5605,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4185,
+              "direction": "positive",
+              "value": 1.6
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3515,
+              "direction": "negative",
+              "value": 0.0062
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3496,
+              "direction": "negative",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.3454,
+              "direction": "negative",
+              "value": 0.16
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.3096,
+              "direction": "negative",
+              "value": 0.3365
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "07b75ab1-1031-44d1-ba64-eba298adc886",
+      "patient_id": "30b2f9c5-6f44-4406-b459-38f187321a43",
+      "patient_name": "Akul Tyagi",
+      "timestamp": "2026-03-27T22:03:25.516326",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 22.0,
+        "Weight": 64.0,
+        "Height": 178.0,
+        "BMI": 20.2,
+        "Baseline_PEF_Ls": 11.73,
+        "Baseline_FEF2575_Ls": 6.368,
+        "Baseline_Extrapolated_Volume": 0.056,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 8.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.3,
+        "probabilities": {
+          "Normal": 0.7533,
+          "Obstruction": 0.1245,
+          "Restriction": 0.1221
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3579,
+              "direction": "positive",
+              "value": 6.368
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 1.9971
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6384,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5388,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4486,
+              "direction": "negative",
+              "value": 40.5514
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 74.6966
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3816,
+              "direction": "positive",
+              "value": 22.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3307,
+              "direction": "positive",
+              "value": 20.2
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2102,
+              "direction": "positive",
+              "value": 0.2895
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "f353b132-2339-4f73-9f20-75d13f434a24",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:06:30.409525",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.73,
+        "Baseline_FEF2575_Ls": 6.368,
+        "Baseline_Extrapolated_Volume": 0.056,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 8.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.3,
+        "probabilities": {
+          "Normal": 0.7527,
+          "Obstruction": 0.1249,
+          "Restriction": 0.1223
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3579,
+              "direction": "positive",
+              "value": 6.368
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 1.9971
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6384,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.539,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4486,
+              "direction": "negative",
+              "value": 40.5514
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 74.6966
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3816,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3307,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2102,
+              "direction": "positive",
+              "value": 0.2769
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "255fb15d-afef-48a8-8418-69caca48d471",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:06:40.363097",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.73,
+        "Baseline_FEF2575_Ls": 6.368,
+        "Baseline_Extrapolated_Volume": 0.056,
+        "Baseline_Forced_Expiratory_Time": 6.5,
+        "Baseline_Number_Acceptable_Curves": 8.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 74.9,
+        "probabilities": {
+          "Normal": 0.7494,
+          "Obstruction": 0.1263,
+          "Restriction": 0.1244
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3579,
+              "direction": "positive",
+              "value": 6.368
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 1.9971
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6384,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.539,
+              "direction": "negative",
+              "value": 6.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4486,
+              "direction": "negative",
+              "value": 40.5514
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 74.6966
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3816,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3307,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2102,
+              "direction": "positive",
+              "value": 0.2769
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "9862d46b-beff-4bd0-964f-01f38847f00d",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:12.614423",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 10.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 6.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.2,
+        "probabilities": {
+          "Normal": 0.7523,
+          "Obstruction": 0.1256,
+          "Restriction": 0.1221
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3577,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6369,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6329,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.545,
+              "direction": "negative",
+              "value": 6.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.48,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4477,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4214,
+              "direction": "negative",
+              "value": 70.2975
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.381,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3308,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2104,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "be95b722-2007-4598-b8c9-07787847dbeb",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:16.348847",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 10.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 6.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.2,
+        "probabilities": {
+          "Normal": 0.7523,
+          "Obstruction": 0.1256,
+          "Restriction": 0.1221
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3577,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6369,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6329,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.545,
+              "direction": "negative",
+              "value": 6.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.48,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4477,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4214,
+              "direction": "negative",
+              "value": 70.2975
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.381,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3308,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2104,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "a094c779-f3a0-4521-80fa-83241332b912",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:17.482189",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 10.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 6.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.2,
+        "probabilities": {
+          "Normal": 0.7523,
+          "Obstruction": 0.1256,
+          "Restriction": 0.1221
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3577,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6369,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6329,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.545,
+              "direction": "negative",
+              "value": 6.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.48,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4477,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4214,
+              "direction": "negative",
+              "value": 70.2975
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.381,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3308,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2104,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "dba8938c-ba9e-45cc-a86a-02d5fd975852",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:23.550974",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 10.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 7.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1247,
+          "Restriction": 0.1203
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3577,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6369,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6329,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.545,
+              "direction": "negative",
+              "value": 7.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.48,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4477,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4214,
+              "direction": "negative",
+              "value": 70.2975
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.381,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3308,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2104,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "b77cb3ef-aa6e-46a0-b4b4-e41e55f8eadc",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:29.142095",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 10.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1247,
+          "Restriction": 0.1203
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3577,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6369,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6329,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.545,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.48,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4477,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4214,
+              "direction": "negative",
+              "value": 70.2975
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.381,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3308,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2104,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "6b980d34-6ab2-46ab-85f9-13d3f8607987",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:34.277475",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.83,
+        "Baseline_FEF2575_Ls": 6.491,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.3,
+        "probabilities": {
+          "Normal": 0.7531,
+          "Obstruction": 0.1248,
+          "Restriction": 0.1221
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3578,
+              "direction": "positive",
+              "value": 6.491
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 2.0137
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6384,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.539,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4803,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4487,
+              "direction": "negative",
+              "value": 42.1331
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 76.7885
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3816,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3307,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2102,
+              "direction": "positive",
+              "value": 0.2822
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "6694b652-bccd-458c-a912-9b0deba385d4",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:07:41.972494",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.83,
+        "Baseline_FEF2575_Ls": 6.831,
+        "Baseline_Extrapolated_Volume": 0.046,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1242,
+          "Restriction": 0.1208
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3578,
+              "direction": "positive",
+              "value": 6.831
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 2.0581
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6313,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5383,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4487,
+              "direction": "negative",
+              "value": 46.6626
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 80.8107
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3815,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3305,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2083,
+              "direction": "positive",
+              "value": 0.297
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "46d4ee04-11a1-4bf0-bad1-f3edb30537fc",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:08:00.583601",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.83,
+        "Baseline_FEF2575_Ls": 6.831,
+        "Baseline_Extrapolated_Volume": 0.053,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1242,
+          "Restriction": 0.1208
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3578,
+              "direction": "positive",
+              "value": 6.831
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 2.0581
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6313,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5383,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4487,
+              "direction": "negative",
+              "value": 46.6626
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 80.8107
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3815,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3305,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2083,
+              "direction": "positive",
+              "value": 0.297
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "a7f2f48d-f237-428c-8cd8-11e7e45c5f0a",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:08:16.903113",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.83,
+        "Baseline_FEF2575_Ls": 6.831,
+        "Baseline_Extrapolated_Volume": 0.053,
+        "Baseline_Forced_Expiratory_Time": 8.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1242,
+          "Restriction": 0.1208
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3578,
+              "direction": "positive",
+              "value": 6.831
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 2.0581
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6313,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5383,
+              "direction": "negative",
+              "value": 8.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4487,
+              "direction": "negative",
+              "value": 46.6626
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 80.8107
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3815,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3305,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2083,
+              "direction": "positive",
+              "value": 0.297
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "cf85d67e-dd7e-4b35-a045-0a692a4c02a5",
+      "patient_id": "bb57b9db-df72-4947-8e6b-2896b24c4af5",
+      "patient_name": "Harsh Arora",
+      "timestamp": "2026-03-27T22:08:56.786947",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 23.0,
+        "Weight": 72.0,
+        "Height": 178.0,
+        "BMI": 22.7,
+        "Baseline_PEF_Ls": 11.83,
+        "Baseline_FEF2575_Ls": 6.831,
+        "Baseline_Extrapolated_Volume": 0.053,
+        "Baseline_Forced_Expiratory_Time": 10.5,
+        "Baseline_Number_Acceptable_Curves": 9.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 1.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.5,
+        "probabilities": {
+          "Normal": 0.755,
+          "Obstruction": 0.1242,
+          "Restriction": 0.1208
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3578,
+              "direction": "positive",
+              "value": 6.831
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6428,
+              "direction": "positive",
+              "value": 2.0581
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6313,
+              "direction": "negative",
+              "value": 31684.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5383,
+              "direction": "negative",
+              "value": 10.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4802,
+              "direction": "negative",
+              "value": 178.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4487,
+              "direction": "negative",
+              "value": 46.6626
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4233,
+              "direction": "negative",
+              "value": 80.8107
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3815,
+              "direction": "positive",
+              "value": 23.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3305,
+              "direction": "positive",
+              "value": 22.7
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2083,
+              "direction": "positive",
+              "value": 0.297
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "f55f7ff8-d792-44db-a7ee-a2319b89ea1f",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-03-31T13:38:21.511880",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 82.2,
+        "probabilities": {
+          "Normal": 0.1528,
+          "Obstruction": 0.8215,
+          "Restriction": 0.0257
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -1.861,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.2114,
+              "direction": "positive",
+              "value": 12.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.1558,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.645,
+              "direction": "positive",
+              "value": 170.0
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.5605,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4185,
+              "direction": "positive",
+              "value": 1.6
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3515,
+              "direction": "negative",
+              "value": 0.0062
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3496,
+              "direction": "negative",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.3454,
+              "direction": "negative",
+              "value": 0.16
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.3096,
+              "direction": "negative",
+              "value": 0.3365
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "07c79e16-540b-49be-86cf-47161dff5347",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-04-01T05:08:23.168102",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 7.5,
+        "Baseline_FEF2575_Ls": 3.2,
+        "Baseline_Extrapolated_Volume": 0.15,
+        "Baseline_Forced_Expiratory_Time": 4.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 76.3,
+        "probabilities": {
+          "Normal": 0.7632,
+          "Obstruction": 0.1146,
+          "Restriction": 0.1223
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3629,
+              "direction": "positive",
+              "value": 3.2
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6349,
+              "direction": "positive",
+              "value": 1.4351
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6489,
+              "direction": "negative",
+              "value": 28900.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5418,
+              "direction": "negative",
+              "value": 4.5
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4856,
+              "direction": "negative",
+              "value": 170.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4504,
+              "direction": "negative",
+              "value": 10.24
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4206,
+              "direction": "negative",
+              "value": 24.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3827,
+              "direction": "positive",
+              "value": 65.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3339,
+              "direction": "positive",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2182,
+              "direction": "positive",
+              "value": 0.0492
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "be4edfb9-03ef-42da-ab4d-71517f9ee060",
+      "patient_id": "75af4140-b677-4630-b8e2-4f06f51f96fb",
+      "patient_name": "Sarah",
+      "timestamp": "2026-04-01T08:32:16.409886",
+      "patient_input": {
+        "Sex": 0.0,
+        "Age": 25.0,
+        "Weight": 52.0,
+        "Height": 162.0,
+        "BMI": 19.8,
+        "Baseline_PEF_Ls": 7.5,
+        "Baseline_FEF2575_Ls": 3.2,
+        "Baseline_Extrapolated_Volume": 0.15,
+        "Baseline_Forced_Expiratory_Time": 4.5,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 76.8,
+        "probabilities": {
+          "Normal": 0.7682,
+          "Obstruction": 0.1133,
+          "Restriction": 0.1185
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.3631,
+              "direction": "positive",
+              "value": 3.2
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.6163,
+              "direction": "positive",
+              "value": 1.4351
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.6352,
+              "direction": "negative",
+              "value": 26244.0
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": -0.5528,
+              "direction": "negative",
+              "value": 4.5
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4617,
+              "direction": "negative",
+              "value": 10.24
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.4548,
+              "direction": "negative",
+              "value": 162.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4079,
+              "direction": "negative",
+              "value": 24.0
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3853,
+              "direction": "positive",
+              "value": 25.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3018,
+              "direction": "positive",
+              "value": 19.8
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": 0.2251,
+              "direction": "positive",
+              "value": 0.128
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "7ad5d394-c4d5-4ad1-8a0f-2b5f3bcc3656",
+      "patient_id": "491661df-4804-4ef6-801d-88961579bc50",
+      "patient_name": "Rajat",
+      "timestamp": "2026-04-06T06:40:10.375064",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 65.0,
+        "Weight": 85.0,
+        "Height": 170.0,
+        "BMI": 29.4,
+        "Baseline_PEF_Ls": 2.0,
+        "Baseline_FEF2575_Ls": 0.4,
+        "Baseline_Extrapolated_Volume": 0.3,
+        "Baseline_Forced_Expiratory_Time": 12.0,
+        "Baseline_Number_Acceptable_Curves": 3.0,
+        "Race_Black": 0.0,
+        "Race_White": 1.0,
+        "Race_Mexican American": 0.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Obstruction",
+        "confidence_pct": 82.2,
+        "probabilities": {
+          "Normal": 0.1528,
+          "Obstruction": 0.8215,
+          "Restriction": 0.0257
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": -1.861,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "Baseline_Forced_Expiratory_Time",
+              "contribution": 1.2114,
+              "direction": "positive",
+              "value": 12.0
+            },
+            {
+              "feature": "Age",
+              "contribution": -1.1558,
+              "direction": "negative",
+              "value": 65.0
+            },
+            {
+              "feature": "Height",
+              "contribution": 0.645,
+              "direction": "positive",
+              "value": 170.0
+            },
+            {
+              "feature": "Sex_x_FEF",
+              "contribution": -0.5605,
+              "direction": "negative",
+              "value": 0.4
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": 0.4185,
+              "direction": "positive",
+              "value": 1.6
+            },
+            {
+              "feature": "FEF_per_Age",
+              "contribution": -0.3515,
+              "direction": "negative",
+              "value": 0.0062
+            },
+            {
+              "feature": "BMI",
+              "contribution": -0.3496,
+              "direction": "negative",
+              "value": 29.4
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.3454,
+              "direction": "negative",
+              "value": 0.16
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": -0.3096,
+              "direction": "negative",
+              "value": 0.3365
+            }
+          ],
+          "text_summary": "Prediction is Obstruction mainly due to low FEF2575 Ls and high Forced Expiratory Time."
+        },
+        "is_heuristic": false
+      }
+    },
+    {
+      "id": "edf5f350-d144-44f7-9bad-50817633a2f6",
+      "patient_id": "b84d96e6-01d9-437b-bb03-0cc6cdff42b0",
+      "patient_name": "ABC",
+      "timestamp": "2026-04-06T07:44:25.630734",
+      "patient_input": {
+        "Sex": 1.0,
+        "Age": 30.0,
+        "Weight": 57.0,
+        "Height": 197.0,
+        "BMI": 14.7,
+        "Baseline_PEF_Ls": 19.0,
+        "Baseline_FEF2575_Ls": 2.0,
+        "Baseline_Extrapolated_Volume": 2.9,
+        "Baseline_Forced_Expiratory_Time": 1.0,
+        "Baseline_Number_Acceptable_Curves": 12.0,
+        "Race_Black": 0.0,
+        "Race_White": 0.0,
+        "Race_Mexican American": 1.0,
+        "Race_Other hispanic": 0.0,
+        "Race_Other race, including multi-racial": 0.0
+      },
+      "prediction": {
+        "prediction": "Normal",
+        "confidence_pct": 75.7,
+        "probabilities": {
+          "Normal": 0.7567,
+          "Obstruction": 0.1019,
+          "Restriction": 0.1414
+        },
+        "explanation": {
+          "top_features": [
+            {
+              "feature": "Baseline_FEF2575_Ls",
+              "contribution": 2.2273,
+              "direction": "positive",
+              "value": 2.0
+            },
+            {
+              "feature": "log_Baseline_FEF2575_Ls",
+              "contribution": 1.5843,
+              "direction": "positive",
+              "value": 1.0986
+            },
+            {
+              "feature": "Height_sq",
+              "contribution": -0.7844,
+              "direction": "negative",
+              "value": 38809.0
+            },
+            {
+              "feature": "Height",
+              "contribution": -0.5605,
+              "direction": "negative",
+              "value": 197.0
+            },
+            {
+              "feature": "FEF_sq",
+              "contribution": -0.4702,
+              "direction": "negative",
+              "value": 4.0
+            },
+            {
+              "feature": "PEF_x_FEF",
+              "contribution": -0.4278,
+              "direction": "negative",
+              "value": 38.0
+            },
+            {
+              "feature": "BMI",
+              "contribution": 0.3955,
+              "direction": "positive",
+              "value": 14.7
+            },
+            {
+              "feature": "Age",
+              "contribution": 0.3186,
+              "direction": "positive",
+              "value": 30.0
+            },
+            {
+              "feature": "PEF_minus_FEF",
+              "contribution": -0.1886,
+              "direction": "negative",
+              "value": 17.0
+            },
+            {
+              "feature": "BMI_x_PEF",
+              "contribution": 0.1838,
+              "direction": "positive",
+              "value": 279.3
+            }
+          ],
+          "text_summary": "Prediction is Normal mainly due to high FEF2575 Ls and high log FEF2575 Ls."
+        },
+        "is_heuristic": false
+      }
+    }
+  ]
+}

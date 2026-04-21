@@ -1,0 +1,122 @@
+{
+  "gpu": "NVIDIA H200",
+  "cuda_version": "12.8",
+  "compute_dtype": "torch.bfloat16",
+  "torch_version": "2.8.0+cu128",
+  "n_features": 34,
+  "n_classes": 3,
+  "class_names": [
+    "Normal",
+    "Obstruction",
+    "Restriction"
+  ],
+  "feature_names": [
+    "Sex",
+    "Age",
+    "Weight",
+    "Height",
+    "BMI",
+    "Baseline_PEF_Ls",
+    "Baseline_FEF2575_Ls",
+    "Baseline_Extrapolated_Volume",
+    "Baseline_Forced_Expiratory_Time",
+    "Baseline_Number_Acceptable_Curves",
+    "Race_Black",
+    "Race_Mexican American",
+    "Race_Other hispanic",
+    "Race_Other race, including multi-racial",
+    "Race_White",
+    "log_Baseline_PEF_Ls",
+    "log_Baseline_FEF2575_Ls",
+    "log_Baseline_Extrapolated_Volume",
+    "log_Baseline_Forced_Expiratory_Time",
+    "FEF_PEF_Ratio",
+    "PEF_x_FEF",
+    "PEF_minus_FEF",
+    "Vol_per_FET",
+    "PEF_per_Age",
+    "FEF_per_Age",
+    "Height_sq",
+    "PEF_per_Ht",
+    "FEF_per_Ht",
+    "BMI_x_PEF",
+    "BMI_x_FEF",
+    "Sex_x_PEF",
+    "Sex_x_FEF",
+    "PEF_sq",
+    "FEF_sq"
+  ],
+  "ft_config": {
+    "d_token": 256,
+    "n_layers": 6,
+    "n_heads": 8,
+    "ffn_factor": 1.3333333333333333
+  },
+  "ensemble_weights": {
+    "xgb": 0.3,
+    "lgb": 0.35,
+    "ft": 0.25,
+    "dnn": 0.1
+  },
+  "ensemble_bias": [
+    -0.30,
+    0.60,
+    0.10
+  ],
+  "cv_results": {
+    "XGBoost": {
+      "cv_f1": 0.8462788804486696,
+      "cv_std": 0.006101120026703527
+    },
+    "LightGBM": {
+      "cv_f1": 0.848956380491759,
+      "cv_std": 0.005767729705932159
+    },
+    "VanillaDNN": {
+      "cv_f1": 0.8066958001133427,
+      "cv_std": 0.005774118237133395
+    },
+    "FT-Transformer": {
+      "cv_f1": 0.8016619460448787,
+      "cv_std": 0.00669868116181609
+    }
+  },
+  "test_results": {
+    "XGBoost": {
+      "Accuracy": 0.9413654618473896,
+      "Macro F1": 0.8513094060833479,
+      "Weighted F1": 0.9433095748619175,
+      "Macro AUC": 0.9864420110131515
+    },
+    "LightGBM": {
+      "Accuracy": 0.9381526104417671,
+      "Macro F1": 0.8386555243588395,
+      "Weighted F1": 0.9398507904639164,
+      "Macro AUC": 0.9853796665475777
+    },
+    "VanillaDNN": {
+      "Accuracy": 0.9204819277108434,
+      "Macro F1": 0.8201531292468219,
+      "Weighted F1": 0.925454223064505,
+      "Macro AUC": 0.9708535345469214
+    },
+    "FT-Transformer": {
+      "Accuracy": 0.9192771084337349,
+      "Macro F1": 0.8152894309268777,
+      "Weighted F1": 0.9244799028465205,
+      "Macro AUC": 0.9751167486451265
+    },
+    "Ensemble": {
+      "Accuracy": 0.936144578313253,
+      "Macro F1": 0.8431310481692161,
+      "Weighted F1": 0.9386304341418844,
+      "Macro AUC": 0.9827892096032396
+    },
+    "Ensemble+Thresh": {
+      "Accuracy": 0.9453815261044177,
+      "Macro F1": 0.8543443927925628,
+      "Weighted F1": 0.9459737417952836,
+      "Macro AUC": 0.9827892096032396
+    }
+  }
+}

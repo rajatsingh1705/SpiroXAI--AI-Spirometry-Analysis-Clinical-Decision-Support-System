@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpiroXAI — Lung Disease Diagnostic System</title>
+  <meta name="description" content="AI-powered spirometry analysis and lung disease diagnostic system using Explainable AI (XAI). Ensemble of XGBoost, LightGBM, DNN, and FT-Transformer models."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ── Toast Container ───────────────────────────────────────────────────── -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- ── Main App (no auth) ────────────────────────────────────────────────── -->
+  <div id="app" class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+          <path d="M18 16C14 16 12 20 12 24C12 30 16 36 24 40C32 36 36 30 36 24C36 20 34 16 30 16C27 16 25.5 18 24 20C22.5 18 21 16 18 16Z" fill="white"/>
+        </svg>
+        <span>SpiroXAI</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" id="nav-dashboard" onclick="showView('dashboard')">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg>
+          New Diagnosis
+        </a>
+        <a href="#" class="nav-item" id="nav-history" onclick="showView('history')">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+          History
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-badge">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 11.75A1.25 1.25 0 1 0 9 14.25 1.25 1.25 0 0 0 9 11.75zM15 11.75A1.25 1.25 0 1 0 15 14.25 1.25 1.25 0 0 0 15 11.75z"/><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg>
+          Ensemble · H200
+        </div>
+        <p class="sidebar-version">v2.0 Demo</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- ── Dashboard (Diagnosis) View ──────────────────────────────────── -->
+      <div id="view-dashboard">
+        <header class="page-header">
+          <div>
+            <h1>Spirometry Analysis</h1>
+            <p>Enter patient data and spirometry measurements for an AI-powered lung disease assessment</p>
+          </div>
+          <div class="header-actions">
+            <div class="sample-buttons">
+              <span>Load sample:</span>
+              <button class="sample-btn normal" onclick="loadSample('normal')">Normal</button>
+              <button class="sample-btn obstruction" onclick="loadSample('obstruction')">Obstruction</button>
+              <button class="sample-btn restriction" onclick="loadSample('restriction')">Restriction</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-grid">
+          <!-- LEFT: Input Form -->
+          <div class="card form-card">
+            <h2 class="card-title">Patient & Spirometry Data</h2>
+
+            <!-- Demographics Section -->
+            <div class="form-section">
+              <div class="section-label">
+                <span class="section-icon">👤</span> Patient Demographics
+              </div>
+              <!-- ADDED: Patient Name field -->
+              <div class="form-row">
+                <div class="form-group" style="flex:1">
+                  <label for="patientName">PATIENT NAME</label>
+                  <input type="text" id="patientName" placeholder="Enter patient name"/>
+                </div>
+              </div>
+              <!-- /ADDED -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-Age">Age <span class="unit">years</span></label>
+                  <input type="number" id="inp-Age" min="5" max="120" step="1" placeholder="5–120"/>
+                  <div class="field-error" id="err-Age"></div>
+                </div>
+                <div class="form-group">
+                  <label for="inp-Sex">Sex</label>
+                  <select id="inp-Sex">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                  </select>
+                  <div class="field-error" id="err-Sex"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-Weight">Weight <span class="unit">kg</span></label>
+                  <input type="number" id="inp-Weight" min="10" max="300" step="0.1" placeholder="10–300" oninput="autoCalcBMI()"/>
+                  <div class="field-error" id="err-Weight"></div>
+                </div>
+                <div class="form-group">
+                  <label for="inp-Height">Height <span class="unit">cm</span></label>
+                  <input type="number" id="inp-Height" min="50" max="250" step="0.1" placeholder="50–250" oninput="autoCalcBMI()"/>
+                  <div class="field-error" id="err-Height"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-BMI">BMI <span class="unit">kg/m² · auto</span></label>
+                  <input type="number" id="inp-BMI" min="10" max="70" step="0.1" placeholder="Auto-calculated" readonly/>
+                  <div class="field-error" id="err-BMI"></div>
+                </div>
+                <div class="form-group">
+                  <label for="inp-Race">Race / Ethnicity</label>
+                  <select id="inp-Race">
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Mexican American">Mexican American</option>
+                    <option value="Other Hispanic">Other Hispanic</option>
+                    <option value="Other">Other / Multi-racial</option>
+                  </select>
+                  <div class="field-error" id="err-Race"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Spirometry Section -->
+            <div class="form-section">
+              <div class="section-label">
+                <span class="section-icon">🌬️</span> Spirometry Measurements
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-Baseline_PEF_Ls">PEF <span class="unit">L/s</span></label>
+                  <input type="number" id="inp-Baseline_PEF_Ls" min="0" max="20" step="0.01" placeholder="0–20"/>
+                  <div class="field-error" id="err-Baseline_PEF_Ls"></div>
+                </div>
+                <div class="form-group">
+                  <label for="inp-Baseline_FEF2575_Ls">FEF 25–75% <span class="unit">L/s</span></label>
+                  <input type="number" id="inp-Baseline_FEF2575_Ls" min="0" max="15" step="0.01" placeholder="0–15"/>
+                  <div class="field-error" id="err-Baseline_FEF2575_Ls"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-Baseline_Extrapolated_Volume">Extrapolated Volume <span class="unit">L</span></label>
+                  <input type="number" id="inp-Baseline_Extrapolated_Volume" min="0" max="5" step="0.001" placeholder="0–5"/>
+                  <div class="field-error" id="err-Baseline_Extrapolated_Volume"></div>
+                </div>
+                <div class="form-group">
+                  <label for="inp-Baseline_Forced_Expiratory_Time">Forced Expiratory Time <span class="unit">s</span></label>
+                  <input type="number" id="inp-Baseline_Forced_Expiratory_Time" min="0" max="30" step="0.01" placeholder="0–30"/>
+                  <div class="field-error" id="err-Baseline_Forced_Expiratory_Time"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-Baseline_Number_Acceptable_Curves">Acceptable Curves <span class="unit">#</span></label>
+                  <input type="number" id="inp-Baseline_Number_Acceptable_Curves" min="0" max="20" step="1" placeholder="0–20"/>
+                  <div class="field-error" id="err-Baseline_Number_Acceptable_Curves"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clinical Reference (Optional, not sent to model) -->
+            <div class="form-section reference-section">
+              <div class="section-label">
+                <span class="section-icon">📋</span> Clinical Reference <span class="ref-badge">Optional · Not used by model</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ref-FEV1">FEV1 <span class="unit">L</span></label>
+                  <input type="number" id="ref-FEV1" step="0.01" placeholder="Optional" class="ref-input" oninput="autoCalcRatio()"/>
+                </div>
+                <div class="form-group">
+                  <label for="ref-FVC">FVC <span class="unit">L</span></label>
+                  <input type="number" id="ref-FVC" step="0.01" placeholder="Optional" class="ref-input" oninput="autoCalcRatio()"/>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ref-Ratio">FEV1/FVC Ratio <span class="unit">auto</span></label>
+                  <input type="number" id="ref-Ratio" step="0.01" placeholder="Auto-calculated" class="ref-input" readonly/>
+                </div>
+              </div>
+            </div>
+
+            <div id="form-error" class="error-msg" style="display:none"></div>
+
+            <button class="btn-primary full-width predict-btn" id="predict-btn" onclick="runPrediction()">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+              Run AI Diagnosis
+            </button>
+          </div>
+
+          <!-- RIGHT: Results Panel -->
+          <div id="results-panel" class="results-panel" style="display:none">
+
+            <!-- Prediction Card -->
+            <div class="card result-card" id="result-card">
+              <div class="result-header">
+                <h2 class="card-title">Diagnosis Result</h2>
+                <span class="result-timestamp" id="result-timestamp"></span>
+              </div>
+
+              <!-- Main prediction badge -->
+              <div class="prediction-badge" id="prediction-badge">
+                <div class="badge-icon" id="badge-icon">?</div>
+                <div class="badge-content">
+                  <div class="badge-label">Predicted Diagnosis</div>
+                  <div class="badge-class" id="badge-class">—</div>
+                  <div class="badge-conf" id="badge-conf">—</div>
+                </div>
+              </div>
+
+              <!-- Heuristic warning -->
+              <div id="heuristic-warning" class="warning-banner" style="display:none">
+                ⚠ Models not loaded — result based on clinical heuristic rules
+              </div>
+
+              <!-- Clinical interpretation -->
+              <div id="prediction-subtext" class="prediction-subtext"></div>
+
+              <!-- Probability bars -->
+              <div class="prob-section">
+                <h3>Confidence Distribution</h3>
+                <div id="prob-bars"></div>
+              </div>
+            </div>
+
+            <!-- Explanation Card -->
+            <div class="card explanation-card">
+              <h2 class="card-title">Clinical Explanation (SHAP)</h2>
+              <p id="explanation-text" class="explanation-text">—</p>
+
+              <h3 class="subsection-title">Top Contributing Features</h3>
+              <div id="shap-table-container">
+                <table class="shap-table" id="shap-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Feature</th>
+                      <th>Value</th>
+                      <th>Impact</th>
+                      <th>Direction</th>
+                    </tr>
+                  </thead>
+                  <tbody id="shap-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty state (before first prediction) -->
+          <div id="empty-results" class="card empty-results-card">
+            <div class="empty-icon">🫁</div>
+            <h3>Ready to Analyse</h3>
+            <p>Fill in the patient data and spirometry values, then click <strong>Run AI Diagnosis</strong> to get an instant prediction with explainability.</p>
+            <ul class="feature-list">
+              <li>✓ Ensemble of 4 ML models (XGBoost · LightGBM · FT-Transformer · DNN)</li>
+              <li>✓ SHAP-based feature importance explanations</li>
+              <li>✓ Weighted ensemble with clinical rule boosters</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Previous Records (below the grid) -->
+        <div class="card records-card" id="records-section" style="margin-top:1.5rem;">
+          <h2 class="card-title">Previous Diagnoses</h2>
+          <div id="records-loading" class="loading-msg">Loading records…</div>
+          <div id="records-empty" style="display:none" class="empty-msg">No past diagnoses found.</div>
+          <div class="table-scroll">
+            <table id="records-table" class="history-table" style="display:none">
+              <thead>
+                <tr>
+                  <th>Date / Time</th>
+                  <th>Name</th><!-- ADDED -->
+                  <th>Age</th>
+                  <th>Sex</th>
+                  <th>PEF</th>
+                  <th>FEF 25-75</th>
+                  <th>Diagnosis</th>
+                  <th>Confidence</th>
+                </tr>
+              </thead>
+              <tbody id="records-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── History View ────────────────────────────────────────────────── -->
+      <div id="view-history" style="display:none">
+        <header class="page-header">
+          <div>
+            <h1>Diagnosis History</h1>
+            <p>All past spirometry analyses from the database, newest first</p>
+          </div>
+        </header>
+        <div class="card">
+          <!-- ADDED: History search input -->
+          <div style="margin-bottom:1rem">
+            <input type="text" id="historySearch" placeholder="Search by name or diagnosis..." style="width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:.9rem"/>
+          </div>
+          <!-- /ADDED -->
+          <div id="history-loading" class="loading-msg">Loading history…</div>
+          <div id="history-empty" style="display:none" class="empty-msg">No past diagnoses found.</div>
+          <div id="history-no-results" style="display:none" class="empty-msg">No records found.</div><!-- ADDED -->
+          <div class="table-scroll">
+            <table id="history-table" class="history-table" style="display:none">
+              <thead>
+                <tr>
+                  <th>Date / Time</th>
+                  <th>Name</th><!-- ADDED -->
+                  <th>Age</th>
+                  <th>Sex</th>
+                  <th>Race</th>
+                  <th>BMI</th>
+                  <th>PEF</th>
+                  <th>FEF</th>
+                  <th>Diagnosis</th>
+                  <th>Normal</th>
+                  <th>Obstr.</th>
+                  <th>Restr.</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ── Loading Spinner ───────────────────────────────────────────────────── -->
+  <div id="global-spinner" class="global-spinner" style="display:none">
+    <div class="spinner"></div>
+    <p>Running AI Diagnosis…</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
