@@ -21,17 +21,18 @@ The system integrates modern machine learning models with an intuitive web inter
 ## 🏗️ System Architecture
 
 
+```
 Frontend (HTML, CSS, JavaScript)
-↓
+        ↓
 FastAPI Backend (Python)
-↓
+        ↓
 Machine Learning Models
 (FT-Transformer, XGBoost, LightGBM, DNN)
-↓
+        ↓
 SHAP Explainability Layer
-↓
+        ↓
 Supabase (PostgreSQL + JSONB Storage)
-
+```
 
 ---
 
@@ -104,76 +105,116 @@ Supabase (PostgreSQL + JSONB Storage)
 
 ## 📂 Project Structure
 
-
+```
 spiroxai/
 │
 ├── backend/
-│ ├── main.py
-│ ├── models/
-│ ├── schemas/
-│ ├── routes/
-│ └── utils/
+│   ├── main.py
+│   ├── models/
+│   ├── schemas/
+│   ├── routes/
+│   └── utils/
 │
 ├── frontend/
-│ ├── index.html
-│ ├── styles.css
-│ ├── script.js
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
 │
 ├── database/
-│ └── supabase_config.sql
+│   └── supabase_config.sql
 │
 ├── models/
-│ ├── ft_transformer.pkl
-│ ├── xgboost.pkl
-│ └── lightgbm.pkl
+│   ├── ft_transformer.pkl
+│   ├── xgboost.pkl
+│   └── lightgbm.pkl
 │
 └── README.md
-
-
+```
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
+
 ```bash
 git clone https://github.com/your-username/spiroxai.git
 cd spiroxai
-2️⃣ Backend Setup
+```
+
+### 2️⃣ Backend Setup
+
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-3️⃣ Frontend
+```
 
+### 3️⃣ Frontend
+
+Open directly in your browser:
+
+```bash
+frontend/index.html
+```
+
+### 4️⃣ Database (Supabase)
+
+- Create a project on Supabase
+- Set up PostgreSQL tables
+- Add your API keys in backend configuration
+---
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/spiroxai.git
+cd spiroxai
+```
+### 2️⃣ Backend Setup
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+###3️⃣ Frontend
+```bash
 Open directly in browser:
 
 frontend/index.html
-4️⃣ Database (Supabase)
+```
+###4️⃣ Database (Supabase)
+```bash
 Create a project on Supabase
 Set up PostgreSQL tables
 Add API keys in backend configuration
-🔐 Environment Variables
-
+```
+###🔐 Environment Variables
+```bash
 Create a .env file inside backend:
 
 SUPABASE_URL=your_url
 SUPABASE_KEY=your_key
-🎯 Use Cases
+```
+###🎯 Use Cases
+```bash
 Clinical decision support systems
 Healthcare AI applications
 Spirometry data analysis tools
 Academic and research projects
-⚠️ Disclaimer
-
+```
+###⚠️ Disclaimer
+```bash
 This project is for educational and research purposes only and is not intended for real clinical use.
-
-👨‍💻 Author
-
+```
+###👨‍💻 Author
+```bash
 Rajat Singh
-Computer Science Engineering Student
-
-⭐ Future Improvements
+Nihar Routray
+```
+###⭐ Future Improvements
+```bash
 Deploy on cloud (AWS / Vercel / Render)
 Add authentication system
 Real-time spirometry graph upload
 Mobile responsiveness improvements
 Integration with hospital systems
+```
